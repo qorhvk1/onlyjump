@@ -1,47 +1,47 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.WSA;
+// using System;
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEditor;
+// using UnityEngine;
+// using UnityEngine.WSA;
 
-public class PlatformGenerator : EditorWindow
-{
+// public class PlatformGenerator : EditorWindow
+// {
 
-	[MenuItem("OJ Tool/Platform Generator")]
-	public static void SampleWindow()
-	{
-		Debug.Log("¸Þ´º½ÇÇà");
+// 	[MenuItem("OJ Tool/Platform Generator")]
+// 	public static void SampleWindow()
+// 	{
+// 		Debug.Log("ï¿½Þ´ï¿½ï¿½ï¿½ï¿½ï¿½");
 
-		var window = CreateInstance<PlatformGenerator>();
-		window.Show();
-		window.minSize = new Vector2(300, 200); // ÃÖ¼Ò Å©±â
-		window.maxSize = new Vector2(600, 400); // ÃÖ´ë Å©±â
-	}
+// 		var window = CreateInstance<PlatformGenerator>();
+// 		window.Show();
+// 		window.minSize = new Vector2(300, 200); // ï¿½Ö¼ï¿½ Å©ï¿½ï¿½
+// 		window.maxSize = new Vector2(600, 400); // ï¿½Ö´ï¿½ Å©ï¿½ï¿½
+// 	}
 
-	public GameObject prefab;
-	//ÇØ´ç ÇÁ¸®ÆÕÀÇ X,Y À§Ä¡ ¼Ó¼º
-	static float X = 0;
-	static float Y = 0;
-	//ÇØ´ç ÇÁ¸®ÆÕÀÇ Æø ³ôÀÌ ¼Ó¼º
-	static float scaleX = 0;
-	static float scaleY = 0;
+// 	public GameObject prefab;
+// 	//ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ X,Y ï¿½ï¿½Ä¡ ï¿½Ó¼ï¿½
+// 	static float X = 0;
+// 	static float Y = 0;
+// 	//ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó¼ï¿½
+// 	static float scaleX = 0;
+// 	static float scaleY = 0;
 
-	private void OnGUI()
-	{
-		prefab = EditorGUILayout.ObjectField(prefab, typeof(GameObject), false) as GameObject;
-		//ÇØ´ç ÇÁ¸®ÆÕÀÇ X,Y À§Ä¡ ¼Ó¼º
-		X = EditorGUILayout.FloatField("X", X);
-		Y = EditorGUILayout.FloatField("Y", Y);
-		//ÇØ´ç ÇÁ¸®ÆÕÀÇ X,Y À§Ä¡ ¼Ó¼º
-		scaleX = EditorGUILayout.FloatField("scaleX", scaleX);
-		scaleY = EditorGUILayout.FloatField("scaleY", scaleY);
+// 	private void OnGUI()
+// 	{
+// 		prefab = EditorGUILayout.ObjectField(prefab, typeof(GameObject), false) as GameObject;
+// 		//ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ X,Y ï¿½ï¿½Ä¡ ï¿½Ó¼ï¿½
+// 		X = EditorGUILayout.FloatField("X", X);
+// 		Y = EditorGUILayout.FloatField("Y", Y);
+// 		//ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ X,Y ï¿½ï¿½Ä¡ ï¿½Ó¼ï¿½
+// 		scaleX = EditorGUILayout.FloatField("scaleX", scaleX);
+// 		scaleY = EditorGUILayout.FloatField("scaleY", scaleY);
 
 
-		if (GUILayout.Button("OK"))
-		{
-			GameObject newObject = Instantiate(prefab, new Vector3(X, Y, 0), Quaternion.identity);
-			newObject.transform.localScale = new Vector3(scaleX, scaleY, 1);  // X, Y Å©±â ¼³Á¤
-		}
-	}
-}
+// 		if (GUILayout.Button("OK"))
+// 		{
+// 			GameObject newObject = Instantiate(prefab, new Vector3(X, Y, 0), Quaternion.identity);
+// 			newObject.transform.localScale = new Vector3(scaleX, scaleY, 1);  // X, Y Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+// 		}
+// 	}
+// }
